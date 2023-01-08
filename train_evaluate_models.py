@@ -209,7 +209,7 @@ model_generators = [
     (cannizzaro_mlp, 'Simple MLP, 3 hidden layers (8, 8, 6)'),
     (cnn_loc, 'CNNLoc, SAE + Conv layers'),
 ]
-EPOCHS = 30000
+EPOCHS = 50000
 BATCH_SIZE = 8
 
 
