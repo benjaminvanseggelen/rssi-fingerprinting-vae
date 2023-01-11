@@ -224,7 +224,7 @@ for i, model in enumerate(models_default):
 
 for i, model in enumerate(models_generated):
     print(f"Training model '{model_generators[i][1]}' on generated data")
-    model.fit(train_features, train_target, epochs=EPOCHS,
+    model.fit(generated_train_features, generated_train_target, epochs=EPOCHS,
               batch_size=BATCH_SIZE, callbacks=[es])
 
 # %%

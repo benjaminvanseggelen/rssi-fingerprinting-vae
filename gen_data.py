@@ -176,7 +176,7 @@ print(df_train_locs)
 # %%
 # Controls how many samples will be added, make sure the square root of this is an int
 MULTIPLICATION_FACTOR = 9
-SAMPLE_VARIANCE = 0.025
+SAMPLE_VARIANCE = 0.2
 
 positions = []
 samples = []
