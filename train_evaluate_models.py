@@ -42,9 +42,9 @@ df_train_strengths = pd.read_csv(
 df_train_locs = pd.read_csv(
     DATASET_ROOT+TRAIN_LOCATIONS_FILE, sep=';', names=['x', 'y'], dtype=float)
 df_generated_train_strengths = pd.read_csv(
-    DATASET_ROOT+TRAIN_STRENGTHS_FILE, sep=';', names=[x for x in range(NUMBER_OF_BEACONS)])
+    DATASET_ROOT+GENERATED_TRAIN_STRENGTHS_FILE, sep=';', names=[x for x in range(NUMBER_OF_BEACONS)])
 df_generated_train_locs = pd.read_csv(
-    DATASET_ROOT+TRAIN_LOCATIONS_FILE, sep=';', names=['x', 'y'], dtype=float)
+    DATASET_ROOT+GENERATED_TRAIN_LOCATIONS_FILE, sep=';', names=['x', 'y'], dtype=float)
 df_test_strengths = pd.read_csv(
     DATASET_ROOT+TEST_STRENGTHS_FILE, sep=';', names=[x for x in range(NUMBER_OF_BEACONS)])
 df_test_locs = pd.read_csv(
@@ -52,8 +52,8 @@ df_test_locs = pd.read_csv(
 
 train_features = df_train_strengths
 train_target = df_train_locs
-generated_train_features = df_train_strengths
-generated_train_target = df_train_locs
+generated_train_features = df_generated_train_strengths
+generated_train_target = df_generated_train_locs
 test_features = df_test_strengths
 test_target = df_test_locs
 

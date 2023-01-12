@@ -163,7 +163,7 @@ vae.compile(optimizer=tf.keras.optimizers.Adam())
 
 #es = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=500)
 #history = vae.fit(train_features, epochs=EPOCHS, batch_size=BATCH_SIZE, callbacks=[es])
-history = vae.fit(train_features, epochs=EPOCHS, batch_size=BATCH_SIZE)
+history = vae.fit(train_features, epochs=EPOCHS, batch_size=BATCH_SIZE, verbose=0)
 
 # %% [markdown]
 # ### Generate new data from training data
@@ -175,8 +175,8 @@ print(df_train_locs)
 
 # %%
 # Controls how many samples will be added, make sure the square root of this is an int
-MULTIPLICATION_FACTOR = 9
-SAMPLE_VARIANCE = 0.2
+MULTIPLICATION_FACTOR = 25
+SAMPLE_VARIANCE = 0.025
 
 positions = []
 samples = []
