@@ -24,7 +24,7 @@ if gpus:
 tf.config.run_functions_eagerly(False)
 
 # %%
-USE_BT = True
+USE_BT = False
 
 
 DATASET_ROOT = "data/"
@@ -98,9 +98,9 @@ def gen_simple_model():
 
     model = tf.keras.models.Sequential([
         normalizer,
-        layers.Dense(math.ceil((2//3) * NUMBER_OF_BEACONS), activation='relu'),
+        layers.Dense(math.ceil((2/3) * NUMBER_OF_BEACONS), activation='relu'),
         layers.Dropout(0.5),
-        layers.Dense(math.ceil((2//3) * NUMBER_OF_BEACONS), activation='relu'),
+        layers.Dense(math.ceil((2/3) * NUMBER_OF_BEACONS), activation='relu'),
         layers.Dropout(0.5),
         layers.Dense(2, activation='relu'),
         layers.Dropout(0.5)
@@ -202,12 +202,12 @@ def cnn_loc():
 
 # %%
 model_generators = [
-    (gen_basic_model, 'Basic model, 3 hidden layers (500) with dropout (0.5)'),
-    (gen_simple_model,
-     'Simple model, 3 hidden layers 2/3 * #_{APs} with dropout (0.5)'),
+    #(gen_basic_model, 'Basic model, 3 hidden layers (500) with dropout (0.5)'),
+    # (gen_simple_model,
+    # 'Simple model, 3 hidden layers 2/3 * #_{APs} with dropout (0.5)'),
     (homayani_conv_model, 'Basic 1D convolutional network, 2 conv layers and 1 dense'),
-    (cannizzaro_mlp, 'Simple MLP, 3 hidden layers (8, 8, 6)'),
-    (cnn_loc, 'CNNLoc, SAE + Conv layers'),
+    #(cannizzaro_mlp, 'Simple MLP, 3 hidden layers (8, 8, 6)'),
+    #(cnn_loc, 'CNNLoc, SAE + Conv layers'),
 ]
 EPOCHS = 50000
 BATCH_SIZE = 8

@@ -106,3 +106,27 @@ Evaluating generated data model 'Simple MLP, 3 hidden layers (8, 8, 6)'
 15/15 [==============================] - 0s 767us/step - loss: 12.7650
 Evaluating generated data model 'CNNLoc, SAE + Conv layers'
 15/15 [==============================] - 0s 928us/step - loss: 6.7800
+
+# Note that Simple model, 3 hidden layers above this are all false
+
+Less APs
+Evaluating original data model 'Basic model, 3 hidden layers (500) with dropout (0.5)'
+15/15 [==============================] - 0s 836us/step - loss: 10.8516
+Evaluating original data model 'Simple model, 3 hidden layers 2/3 * #_{APs} with dropout (0.5)'
+15/15 [==============================] - 0s 722us/step - loss: 13.5965
+Evaluating original data model 'Basic 1D convolutional network, 2 conv layers and 1 dense'
+15/15 [==============================] - 0s 3ms/step - loss: 6.8847
+Evaluating original data model 'Simple MLP, 3 hidden layers (8, 8, 6)'
+15/15 [==============================] - 0s 788us/step - loss: 6.0389
+Evaluating original data model 'CNNLoc, SAE + Conv layers'
+15/15 [==============================] - 0s 3ms/step - loss: 4.6676
+Evaluating generated data model 'Basic model, 3 hidden layers (500) with dropout (0.5)'
+15/15 [==============================] - 0s 766us/step - loss: 14.7674
+Evaluating generated data model 'Simple model, 3 hidden layers 2/3 * #_{APs} with dropout (0.5)'
+15/15 [==============================] - 0s 712us/step - loss: 13.5349
+Evaluating generated data model 'Basic 1D convolutional network, 2 conv layers and 1 dense'
+15/15 [==============================] - 0s 1ms/step - loss: 26.8480
+Evaluating generated data model 'Simple MLP, 3 hidden layers (8, 8, 6)'
+15/15 [==============================] - 0s 819us/step - loss: 24.8474
+Evaluating generated data model 'CNNLoc, SAE + Conv layers'
+15/15 [==============================] - 0s 943us/step - loss: 15.5326
