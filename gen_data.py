@@ -31,7 +31,7 @@ sess = tf.compat.v1.Session(config=config)
 
 
 # %%
-USE_BT = False
+USE_BT = True
 
 
 DATASET_ROOT = "data/"
@@ -161,10 +161,9 @@ BATCH_SIZE = 8
 vae = VAE(encoder, decoder)
 vae.compile(optimizer=tf.keras.optimizers.Adam())
 
-#es = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=500)
-#history = vae.fit(train_features, epochs=EPOCHS, batch_size=BATCH_SIZE, callbacks=[es])
+es = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=500)
 history = vae.fit(train_features, epochs=EPOCHS,
-                  batch_size=BATCH_SIZE, verbose=0)
+                  batch_size=BATCH_SIZE, verbose=0, callbacks=[es])
 
 # %% [markdown]
 # ### Generate new data from training data
